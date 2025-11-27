@@ -10,7 +10,7 @@
         "Full width"
       ],
       "content": {
-        "endpoint": "https://raw.githubusercontent.com/gs-karolb/my-special-widgets/refs/heads/main/widgets/hello-world/content.html",
+        "endpoint": "https://raw.githubusercontent.com/gs-karolbajko/my-special-widgets/refs/heads/main/widgets/hello-world/content.html",
         "method": "GET",
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
