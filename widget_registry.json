@@ -2,24 +2,15 @@
   "widgets": [
     {
       "version": "1.0.1",
-      "title": "Custom External Widget test",
-      "type": "custom_external_widget",
-      "description": "External Widget for displaying interesting content",
-      "category": "external",
+      "title": "Hello World",
+      "type": "hello_world",
+      "description": "Hello World Widget",
+      "category": "hello_world",
       "containers": [
         "Full width"
       ],
-      "imageName": "custom_external_widget",
-      "widgetsLibrary": true,
-      "settings": {
-        "configurable": true,
-        "editable": true,
-        "removable": true,
-        "shared": false,
-        "movable": false
-      },
       "content": {
-        "endpoint": "https://raw.githubusercontent.com/SchoolKeep/widgets-repository-demo/refs/heads/main/widgets/custom_external_widget/content.html",
+        "endpoint": "https://raw.githubusercontent.com/gs-karolb/my-special-widgets/refs/heads/main/widgets/hello-world/content.html",
         "method": "GET",
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
