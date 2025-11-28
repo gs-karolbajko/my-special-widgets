@@ -9,7 +9,7 @@
       "containers": [
         "Full width"
       ],
-      "imageName": "custom_external_widget",
+      "imageSrc": "https://raw.githubusercontent.com/gs-karolbajko/my-special-widgets/refs/heads/main/widgets/hello-world/image.png",
       "widgetsLibrary": true,
       "settings": {
         "configurable": true,
