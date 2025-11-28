@@ -9,5 +9,39 @@
     letter-spacing: -0.02em;
     line-height: 1.2;
   }
+  .waving-hands {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .waving-hands span {
+    display: inline-block;
+    animation: wave 1.5s ease-in-out infinite;
+  }
+  .waving-hands span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .waving-hands span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  @keyframes wave {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(20deg);
+    }
+    75% {
+      transform: rotate(-20deg);
+    }
+  }
 </style>
 <p class="hello-world">Hello World</p>
+<div class="waving-hands">
+  <span>👋</span>
+  <span>👋</span>
+  <span>👋</span>
+</div>
