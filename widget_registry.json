@@ -9,7 +9,7 @@
       "containers": [
         "Full width"
       ],
-      "imageSrc": "https://raw.githubusercontent.com/gs-karolbajko/my-special-widgets/refs/heads/main/widgets/hello-world/image.png",
+      "imageName": "banner",
       "widgetsLibrary": true,
       "settings": {
         "configurable": true,
