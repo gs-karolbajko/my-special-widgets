@@ -30,7 +30,7 @@
       "title": "Lorem Ipsum",
       "type": "lorem_ipsum",
       "description": "Lorem Ipsum Text Widget",
-      "category": "text",
+      "category": "hello_world",
       "containers": [
         "Full width"
       ],
