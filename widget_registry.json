@@ -74,6 +74,31 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
+    },
+    {
+      "version": "1.0.0",
+      "title": "Quote Generator",
+      "type": "quote_generator",
+      "description": "Interactive random quote generator with inspirational messages",
+      "category": "hello_world",
+      "containers": [
+        "Full width"
+      ],
+      "imageName": "banner",
+      "widgetsLibrary": true,
+      "settings": {
+        "configurable": true,
+        "editable": true,
+        "removable": true,
+        "shared": false,
+        "movable": false
+      },
+      "content": {
+        "endpoint": "https://raw.githubusercontent.com/gs-karolbajko/my-special-widgets/refs/heads/main/widgets/quote-generator/content.html",
+        "method": "GET",
+        "requiresAuthentication": false,
+        "cacheStrategy": "no-cache"
+      }
     }
   ]
 }
