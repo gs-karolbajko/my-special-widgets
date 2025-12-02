@@ -24,6 +24,31 @@
         "requiresAuthentication": false,
         "cacheStrategy": "no-cache"
       }
+    },
+    {
+      "version": "1.0.0",
+      "title": "Lorem Ipsum",
+      "type": "lorem_ipsum",
+      "description": "Lorem Ipsum Text Widget",
+      "category": "text",
+      "containers": [
+        "Full width"
+      ],
+      "imageName": "banner",
+      "widgetsLibrary": true,
+      "settings": {
+        "configurable": true,
+        "editable": true,
+        "removable": true,
+        "shared": false,
+        "movable": false
+      },
+      "content": {
+        "endpoint": "https://raw.githubusercontent.com/gs-karolbajko/my-special-widgets/refs/heads/main/widgets/lorem-ipsum/content.html",
+        "method": "GET",
+        "requiresAuthentication": false,
+        "cacheStrategy": "no-cache"
+      }
     }
   ]
 }
