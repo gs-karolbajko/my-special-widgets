@@ -58,11 +58,6 @@
     margin-bottom: 2rem;
     font-style: italic;
     text-align: center;
-    animation: fadeIn 0.6s ease-out;
-    min-height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .quote-author {
     font-size: 1.125rem;
@@ -70,65 +65,11 @@
     color: #0369a1;
     text-align: center;
     margin-bottom: 2rem;
-    animation: fadeIn 0.8s ease-out;
   }
   .quote-author::before {
     content: '— ';
     color: #0ea5e9;
     margin-right: 0.5rem;
-  }
-  .quote-button {
-    display: block;
-    margin: 0 auto;
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: white;
-    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-  .quote-button::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-  }
-  .quote-button:hover::before {
-    width: 300px;
-    height: 300px;
-  }
-  .quote-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
-  }
-  .quote-button:active {
-    transform: translateY(0);
-  }
-  .quote-button span {
-    position: relative;
-    z-index: 1;
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
   .quote-tags {
     display: flex;
@@ -144,112 +85,17 @@
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
-    animation: fadeIn 1s ease-out;
   }
 </style>
 <div class="quote-container">
   <div class="quote-content">
     <div class="quote-icon">💭</div>
-    <div class="quote-text" id="quoteText">Click the button to get inspired!</div>
-    <div class="quote-author" id="quoteAuthor"></div>
-    <button class="quote-button" id="quoteButton" onclick="getRandomQuote()">
-      <span>✨ New Quote</span>
-    </button>
-    <div class="quote-tags" id="quoteTags"></div>
+    <div class="quote-text">"The only way to do great work is to love what you do."</div>
+    <div class="quote-author">Steve Jobs</div>
+    <div class="quote-tags">
+      <div class="quote-tag">Motivation</div>
+      <div class="quote-tag">Work</div>
+    </div>
   </div>
 </div>
-<script>
-  const quotes = [
-    {
-      text: "The only way to do great work is to love what you do.",
-      author: "Steve Jobs",
-      tags: ["Motivation", "Work"]
-    },
-    {
-      text: "Innovation distinguishes between a leader and a follower.",
-      author: "Steve Jobs",
-      tags: ["Innovation", "Leadership"]
-    },
-    {
-      text: "Life is what happens to you while you're busy making other plans.",
-      author: "John Lennon",
-      tags: ["Life", "Wisdom"]
-    },
-    {
-      text: "The future belongs to those who believe in the beauty of their dreams.",
-      author: "Eleanor Roosevelt",
-      tags: ["Dreams", "Future"]
-    },
-    {
-      text: "It is during our darkest moments that we must focus to see the light.",
-      author: "Aristotle",
-      tags: ["Resilience", "Hope"]
-    },
-    {
-      text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-      author: "Winston Churchill",
-      tags: ["Success", "Courage"]
-    },
-    {
-      text: "The way to get started is to quit talking and begin doing.",
-      author: "Walt Disney",
-      tags: ["Action", "Productivity"]
-    },
-    {
-      text: "Don't let yesterday take up too much of today.",
-      author: "Will Rogers",
-      tags: ["Time", "Mindfulness"]
-    },
-    {
-      text: "You learn more from failure than from success. Don't let it stop you. Failure builds character.",
-      author: "Unknown",
-      tags: ["Failure", "Growth"]
-    },
-    {
-      text: "If you are working on something exciting that you really care about, you don't have to be pushed. The vision pulls you.",
-      author: "Steve Jobs",
-      tags: ["Passion", "Vision"]
-    },
-    {
-      text: "People who are crazy enough to think they can change the world, are the ones who do.",
-      author: "Rob Siltanen",
-      tags: ["Change", "Ambition"]
-    },
-    {
-      text: "We may encounter many defeats but we must not be defeated.",
-      author: "Maya Angelou",
-      tags: ["Perseverance", "Strength"]
-    }
-  ];
-  
-  function getRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    const quote = quotes[randomIndex];
-    
-    const quoteText = document.getElementById('quoteText');
-    const quoteAuthor = document.getElementById('quoteAuthor');
-    const quoteTags = document.getElementById('quoteTags');
-    
-    quoteText.style.animation = 'none';
-    quoteAuthor.style.animation = 'none';
-    
-    setTimeout(() => {
-      quoteText.textContent = `"${quote.text}"`;
-      quoteAuthor.textContent = quote.author;
-      
-      quoteTags.innerHTML = '';
-      quote.tags.forEach(tag => {
-        const tagElement = document.createElement('div');
-        tagElement.className = 'quote-tag';
-        tagElement.textContent = tag;
-        quoteTags.appendChild(tagElement);
-      });
-      
-      quoteText.style.animation = 'fadeIn 0.6s ease-out';
-      quoteAuthor.style.animation = 'fadeIn 0.8s ease-out';
-    }, 10);
-  }
-  
-  getRandomQuote();
-</script>
 
